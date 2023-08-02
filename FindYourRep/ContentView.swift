@@ -4,11 +4,12 @@
 //
 //  Created by scholar on 8/1/23.
 //
+// To make something scroll we can do ScrollView{} ?
 
 import SwiftUI
 
 struct ContentView: View {
-
+     @State var choiceMade = "Select Your Region"
     
     var body: some View {
             
@@ -47,26 +48,32 @@ struct ContentView: View {
                     
                     VStack{
                         Menu{
-                            Button(action: { }, label: {
+                            Button(action: {
+                                choiceMade = "District of Columbia (DC)"
+                                }, label: {
                                 Text("District of Columbia (DC)")
-                            })
-                            Button(action: { }, label: {
+                                })
+                            Button(action: {
+                                choiceMade = "More to come"
+                                }, label: {
                                 Text("More to come")
-                            })
-                        } label: {
+                                })
+                            } // for menu
+                        label: {
                             Label(
-                                title: {Text("Select Your Region")},
+                                title: {Text("\(choiceMade)")},
                                 icon: {Image(systemName: "plus")}
-                            )
-                        } // for labels
+                                )
+                            } // for labels
                         } // for drop dow vStack
                     
                     
-                    
-                    NavigationLink(destination: SurveyView()) {
-                        Text("Begin")
-                    } // for survey link
-                    .buttonStyle(.borderedProminent)
+                    if choiceMade == "District of Columbia (DC)" {
+                        NavigationLink(destination: SurveyView()) {
+                            Text("Begin")
+                        } // for survey link
+                        .buttonStyle(.borderedProminent)
+                    }
                     
                 } // for vStack
                 
