@@ -4,12 +4,25 @@
 //
 //  Created by scholar on 8/2/23.
 //
-
 import SwiftUI
 
 struct Candidate1View: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center, spacing: 10.0) {
+            Image("staciaHall")
+            Text("Stacia Hall")
+                .fontWeight(.medium)
+            Text("Party: Republican")
+                .fontWeight(.medium)
+            
+            Text("Stacia Hall believes that the DC community should have a strong relationship with the police force. One of the key points of her campaign is improving new infrastructure, such as repairing the Metro and DC’s roads. Hall has been quoted as saying democrats are 'wicked'.")
+            
+        
+                
+        }
+ 
+        .padding()
+
     }
 }
 
@@ -18,3 +31,4 @@ struct Candidate1View_Previews: PreviewProvider {
         Candidate1View()
     }
 }
+
