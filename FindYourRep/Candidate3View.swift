@@ -1,5 +1,5 @@
 //
-//  Candidate 2.swift
+//  Candidate 3.swift
 //  FindYourRep
 //
 //  Created by scholar on 8/2/23.
@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct Candidate_2: View {
+struct Candidate3View: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Candidate_2_Previews: PreviewProvider {
+struct Candidate3View_Previews: PreviewProvider {
     static var previews: some View {
-        Candidate_2()
+        Candidate3View()
     }
 }
+
+
