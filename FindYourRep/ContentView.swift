@@ -5,6 +5,7 @@
 //  Created by scholar on 8/1/23.
 //
 // To make something scroll we can do ScrollView{} ?
+// https://www.youtube.com/watch?v=dCt4SBNSfE4 link for drop down menu
 
 import SwiftUI
 
@@ -54,9 +55,9 @@ struct ContentView: View {
                                 Text("District of Columbia (DC)")
                                 })
                             Button(action: {
-                                choiceMade = "More to come"
+                                choiceMade = "Select Your Region"
                                 }, label: {
-                                Text("More to come")
+                                Text("Select Your Region")
                                 })
                             } // for menu
                         label: {
