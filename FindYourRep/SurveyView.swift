@@ -18,6 +18,7 @@ struct SurveyView: View {
                 NavigationLink(destination: ResultsView()) {
                     Text("Submit")
                 } // for results link
+                .buttonStyle(.borderedProminent)
                 
             } // for vStack
             
