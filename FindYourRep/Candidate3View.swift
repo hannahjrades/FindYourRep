@@ -8,29 +8,44 @@ import SwiftUI
 
 struct Candidate3View: View {
     var body: some View {
-
-        VStack {
-            Image("rodney")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(50)
-                .padding(.all, 20)
-            Text("Rodney 'Red' Grant")
-                .font(.title)
-                .fontWeight(.heavy)
-            Text("Party: Independent")
-                .font(.title2)
-            Text("Age: ")
-                .font(.title2)
-            Text("Current Position: Comedian, Producer and Actor")
-                .font(.title2)
-            Text("Grant has a local non-profit for young filmmakers and is an advocate for funding arts and humanities programs. He also funds mental health services. He is passionate about violence prevention and the disparities between DC wards. ")
-                .font(.title3)
-            
         
+        ZStack{
+            background(Color("lightGray"))
+                .ignoresSafeArea()
+            VStack {
+                Text("")
+                Text("")
+                Image("rodney")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.trailing, 40)
+                Text("Rodney 'Red' Grant")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                VStack{
+                    
+                    Text("Party: Independent")
+                        .font(.title2)
+                    Text("Age: 44")
+                        .font(.title2)
+                    Text("Current Position: Comedian")
+                        .font(.title2)
+                }
+                Text("Grant has a local non-profit for young filmmakers and is an advocate for funding arts and humanities programs. He also funds mental health services. He is passionate about violence prevention and the disparities between DC wards. ")
+                    .font(.title3)
+                    .padding()
                 
-        } // for vStack
- 
+                
+            } // for vStack
+            .padding()
+            .background(Rectangle()
+                .foregroundColor(Color("lighterGray")))
+                .cornerRadius(15)
+                .shadow(radius: 15)
+                .padding(20)
+        } //for zStack
         
     } // for view
     
