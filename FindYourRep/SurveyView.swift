@@ -17,6 +17,13 @@ struct SurveyView: View {
     @State var issue4result = Bool()
     @State var issue5result = Bool()
     @State var issue6result = Bool()
+    @State var issue7result = Bool()
+    @State var issue8result = Bool()
+    @State var issue9result = Bool()
+    @State var issue10result = Bool()
+    @State var issue11result = Bool()
+    
+    
     
     var body: some View {
         
@@ -48,6 +55,26 @@ struct SurveyView: View {
                     Text("Tax Cuts")
                 }
                 .padding()
+                Toggle(isOn: $issue7result) {
+                    Text("Making D.C. a green city")
+                }
+                .padding()
+                Toggle(isOn: $issue8result) {
+                    Text("Repairing roads")
+                }
+                .padding()
+                Toggle(isOn: $issue9result) {
+                    Text("Increased funding for trade and vocation learning")
+                }
+                .padding()
+                Toggle(isOn: $issue10result) {
+                    Text("Teaching financial literacy")
+                }
+                .padding()
+                Toggle(isOn: $issue11result) {
+                    Text("Employment for the homeless")
+                }
+                .padding()
                 Button("Calculate") {
                     if issue1result == true {
                         bowserCount += 1
@@ -68,13 +95,29 @@ struct SurveyView: View {
                     }
                 }//for calculate button
                 .buttonStyle(.borderedProminent)
-                if bowserCount > grantCount && (hallCount != 0){
-                    NavigationLink(destination: ResultsView()) {
-                        Text("Submit")
-                    } // for results link
-                    .buttonStyle(.borderedProminent)
-                }
                 
+                
+                    if bowserCount > grantCount && bowserCount > hallCount {
+                        NavigationLink(destination: Candidate2View()){
+                            Text("Submit")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    } else if grantCount > hallCount && grantCount > bowserCount{
+                        
+                        NavigationLink(destination: Candidate3View()){
+                            Text("Submit")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    } else if hallCount > grantCount && hallCount > bowserCount{
+                        NavigationLink(destination: Candidate1View()){
+                            Text("Submit")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+              
+                
+                 // for results link
+//                .buttonStyle(.borderedProminent)
                 
             } // for vStack
             
