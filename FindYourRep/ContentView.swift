@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct ContentView: View {
-     @State var choiceMade = "Select Your Region"
+     @State var choiceMade = "Select Your Election"
     
     var body: some View {
             
@@ -34,7 +34,7 @@ struct ContentView: View {
                         .multilineTextAlignment(.leading)
                         .padding()
                     
-                    Text("1. Select your region and election")
+                    Text("1. Select your election")
                         .multilineTextAlignment(.leading)
                         .padding()
                     
@@ -42,7 +42,7 @@ struct ContentView: View {
                         .padding()
                         .multilineTextAlignment(.leading)
                     
-                    Text("3. View your potential candidates!")
+                    Text("3. View your potential candidate!")
                         .multilineTextAlignment(.leading)
                         .padding()
 
@@ -50,14 +50,14 @@ struct ContentView: View {
                     VStack{
                         Menu{
                             Button(action: {
-                                choiceMade = "District of Columbia (DC)"
+                                choiceMade = "DC 2022 Mayoral Election"
                                 }, label: {
-                                Text("District of Columbia (DC)")
+                                Text("DC 2022 Mayoral Election)")
                                 })
                             Button(action: {
-                                choiceMade = "Select Your Region"
+                                choiceMade = "Select Your Election"
                                 }, label: {
-                                Text("Select Your Region")
+                                Text("Select Your Election")
                                 })
                             } // for menu
                         label: {
@@ -69,7 +69,7 @@ struct ContentView: View {
                         } // for drop dow vStack
                     
                     
-                    if choiceMade == "District of Columbia (DC)" {
+                    if choiceMade == "DC 2022 Mayoral Election" {
                         NavigationLink(destination: SurveyView()) {
                             Text("Begin")
                         } // for survey link

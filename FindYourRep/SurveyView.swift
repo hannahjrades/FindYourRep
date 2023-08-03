@@ -21,63 +21,76 @@ struct SurveyView: View {
     @State var issue8result = Bool()
     @State var issue9result = Bool()
     @State var issue10result = Bool()
-
-    
-    
     
     var body: some View {
-        ScrollView {
-            
-            
+
             NavigationStack {
                 
                 VStack{
                     Spacer()
-                    Spacer()
                     Text("Choose which issues are important to you!")
-                    
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .padding(30)
+                    ScrollView{
+                        
                     Group {
                         Toggle(isOn: $issue1result) {
-                            Text("Increased police funding")
+                            Text("1. Increased police funding")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding(.horizontal, 30.0)
                         Toggle(isOn: $issue2result) {
-                            Text("Mental Health")
+                            Text("2. Mental Health")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue3result) {
-                            Text("Youth Programs")
+                            Text("3. Youth Programs")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue4result) {
-                            Text("Reproductive rights")
+                            Text("4. Reproductive rights")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue5result) {
-                            Text("Gun control")
+                            Text("5. Gun control")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue6result) {
-                            Text("Tax cuts")
+                            Text("6. Tax cuts")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue7result) {
-                            Text("Making D.C. a green city")
+                            Text("7. Making D.C. a green city")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue8result) {
-                            Text("Repairing roads")
+                            Text("8. Repairing roads")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue9result) {
-                            Text("Funding for trade/vocational learning")
+                            Text("9. Funding for trade vocational learning")
+                                .font(.title3)
                         }
-                        .padding()
+                        .padding([.top, .leading, .trailing], 30.0)
                         Toggle(isOn: $issue10result) {
-                            Text("Employment for the homeless")
+                            Text("10. Employment for the homeless")
+                                .font(.title3)
                         }
-                        .padding()
-                    }
+                        .padding([.top, .leading, .trailing], 30.0)
+                        
+                        } // for group
+                    } // for scroll view
+                    .padding(.bottom, 30)
+                    
                     Button("Calculate") {
                         if issue1result == true {
                             bowserCount += 1
@@ -111,7 +124,6 @@ struct SurveyView: View {
                     }//for calculate button
                     .buttonStyle(.borderedProminent)
                     
-                    
                     if bowserCount > grantCount && bowserCount > hallCount {
                         NavigationLink(destination: Candidate2View()){
                             Text("Submit")
@@ -130,15 +142,11 @@ struct SurveyView: View {
                         .buttonStyle(.borderedProminent)
                     }
                     
-                    
                     // for results link
-                    //                .buttonStyle(.borderedProminent)
                     
                 } // for vStack
                 
             } // for navigation stack
-            
-        } // for scroll view
         
     } // for some view
   
