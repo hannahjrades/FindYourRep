@@ -86,6 +86,14 @@ struct ContentView: View {
 } // for struct view
 struct CustomColor {
     static let lightGray = Color("lightGray")
+    static let red1 = Color("red1")
+    static let red2 = Color("red2")
+    static let red3 = Color("red3")
+    static let blue1 = Color("blue1")
+    static let blue2 = Color("blue2")
+    static let blue3 = Color("blue3")
+
+
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

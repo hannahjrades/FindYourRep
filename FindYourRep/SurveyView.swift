@@ -23,7 +23,10 @@ struct SurveyView: View {
     @State var issue10result = Bool()
     
     var body: some View {
-
+        ZStack{
+            CustomColor.red2
+                .ignoresSafeArea()
+            
             NavigationStack {
                 
                 VStack{
@@ -35,58 +38,58 @@ struct SurveyView: View {
                         .padding(30)
                     ScrollView{
                         
-                    Group {
-                        Toggle(isOn: $issue1result) {
-                            Text("1. Increased police funding")
-                                .font(.title3)
-                        }
-                        .padding(.horizontal, 30.0)
-                        Toggle(isOn: $issue2result) {
-                            Text("2. Mental Health")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue3result) {
-                            Text("3. Youth Programs")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue4result) {
-                            Text("4. Reproductive rights")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue5result) {
-                            Text("5. Gun control")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue6result) {
-                            Text("6. Tax cuts")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue7result) {
-                            Text("7. Making D.C. a green city")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue8result) {
-                            Text("8. Repairing roads")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue9result) {
-                            Text("9. Funding for trade vocational learning")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        Toggle(isOn: $issue10result) {
-                            Text("10. Employment for the homeless")
-                                .font(.title3)
-                        }
-                        .padding([.top, .leading, .trailing], 30.0)
-                        
+                        Group {
+                            Toggle(isOn: $issue1result) {
+                                Text("1. Increased police funding")
+                                    .font(.title3)
+                            }
+                            .padding(.horizontal, 30.0)
+                            Toggle(isOn: $issue2result) {
+                                Text("2. Mental Health")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue3result) {
+                                Text("3. Youth Programs")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue4result) {
+                                Text("4. Reproductive rights")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue5result) {
+                                Text("5. Gun control")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue6result) {
+                                Text("6. Tax cuts")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue7result) {
+                                Text("7. Making D.C. a green city")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue8result) {
+                                Text("8. Repairing roads")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue9result) {
+                                Text("9. Funding for trade vocational learning")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            Toggle(isOn: $issue10result) {
+                                Text("10. Employment for the homeless")
+                                    .font(.title3)
+                            }
+                            .padding([.top, .leading, .trailing], 30.0)
+                            
                         } // for group
                     } // for scroll view
                     .padding(.bottom, 30)
@@ -147,6 +150,7 @@ struct SurveyView: View {
                 } // for vStack
                 
             } // for navigation stack
+        } // fopr zStack
         
     } // for some view
   

@@ -9,15 +9,35 @@ import SwiftUI
 struct Candidate1View: View {
     var body: some View {
         ZStack{
+            CustomColor.red2
+                .ignoresSafeArea()
             
-            VStack(alignment: .center, spacing: 10.0) {
-                Image("staciaHall")
-                Text("Stacia Hall")
-                    .fontWeight(.medium)
-                Text("Party: Republican")
-                    .fontWeight(.medium)
+            VStack {
                 
-                Text("Stacia Hall believes that the DC community should have a strong relationship with the police force. One of the key points of her campaign is improving new infrastructure, such as repairing the Metro and DC’s roads. Hall has been quoted as saying democrats are 'wicked'.")
+                Image("staciaHall")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(200)
+                    .shadow(radius : 15)
+                Text("Stacia Hall")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                VStack{
+                    
+                    Text("Party: Republican")
+                        .font(.title2)
+                    Text("Age: 53")
+                        .font(.title2)
+                    Text("Current Position: Entrepreneur")
+                        .font(.title2)
+                }
+                
+                Text("Hall believes that the DC community should have a strong relationship with the police force. Her campaign pushes to improve new infrastructure, such as repairing the Metro and DC’s roads. Hall has been quoted as saying democrats are 'wicked'.")
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
+                    .padding()
                 
                 
                 
@@ -25,7 +45,7 @@ struct Candidate1View: View {
             
             .padding()
             .background(Rectangle()
-                .foregroundColor(.white))
+            .foregroundColor(Color("red1")))
                 .cornerRadius(15)
                 .shadow(radius: 15)
                 .padding()
