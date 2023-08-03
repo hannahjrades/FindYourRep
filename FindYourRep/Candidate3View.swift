@@ -10,8 +10,7 @@ struct Candidate3View: View {
     var body: some View {
         
         ZStack{
-            background(Color("lightGray"))
-                .ignoresSafeArea()
+            background(CustomColor.lightGray)
             VStack {
                 Text("")
                 Text("")

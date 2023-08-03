@@ -84,7 +84,9 @@ struct ContentView: View {
         } // for some view
     
 } // for struct view
-
+struct CustomColor {
+    static let lightGray = Color("lightGray")
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
