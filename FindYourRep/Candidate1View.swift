@@ -41,7 +41,7 @@ struct Candidate1View: View {
                 
                 
                 
-            }
+            }//vstack
             
             .padding()
             .background(Rectangle()
