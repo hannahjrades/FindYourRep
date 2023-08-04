@@ -30,7 +30,7 @@ struct ContentView: View {
                         Text("Empower Your Vote:")
                             .font(.title)
                         
-                        Text("Find Your Representative and Influence Change!")
+                        Text("Find your representative and influence change!")
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -55,9 +55,9 @@ struct ContentView: View {
                         VStack{
                             Menu{
                                 Button(action: {
-                                    choiceMade = "DC 2022 Mayoral Election"
+                                    choiceMade = "DC 2022 Mayoral General Election"
                                 }, label: {
-                                    Text("DC 2022 Mayoral Election")
+                                    Text("DC 2022 Mayoral General Election")
                                 })
                                 Button(action: {
                                     choiceMade = "Select Your Election"
@@ -74,7 +74,7 @@ struct ContentView: View {
                         } // for drop dow vStack
                         
                         
-                        if choiceMade == "DC 2022 Mayoral Election" {
+                        if choiceMade == "DC 2022 Mayoral General Election" {
                             NavigationLink(destination: SurveyView()) {
                                 Text("Begin")
                             } // for survey link
