@@ -23,11 +23,12 @@ struct SurveyView: View {
     @State var issue10result = Bool()
     
     var body: some View {
+        
+        
+        NavigationStack {
         ZStack{
-            CustomColor.red2
+            CustomColor.lavender
                 .ignoresSafeArea()
-            
-            NavigationStack {
                 
                 VStack{
                     Spacer()

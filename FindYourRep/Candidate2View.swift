@@ -25,7 +25,6 @@ struct Candidate2View: View {
                     .padding()
                 
                 VStack{
-                    
                     Text("Party: Democrat")
                         .font(.title2)
                     Text("Age: 51")
@@ -33,22 +32,19 @@ struct Candidate2View: View {
                     Text("Current Position: Mayor of DC")
                         .font(.title2)
                 }
-                
                 Text("Bowser believes in having a strong public education system, affordable housing and gun violence prevention. She's been DC’s mayor since 2015, and was a member of the DC council.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
                     .padding()
-                
-            }
-            
+            } // for vStack
             .padding()
             .background(Rectangle()
                 .foregroundColor(Color("blue1")))
                 .cornerRadius(15)
                 .shadow(radius: 15)
                 .padding(20)
-        }
-    }
+        } // for zStack
+    } // for view
 }
 
 struct Candidate2View_Previews: PreviewProvider {

@@ -15,9 +15,9 @@ struct ContentView: View {
     var body: some View {
             
             NavigationStack{
+                
                 ZStack{
-                    
-                    CustomColor.red2
+                    CustomColor.lavender
                         .ignoresSafeArea()
                     
                     VStack{
@@ -57,7 +57,7 @@ struct ContentView: View {
                                 Button(action: {
                                     choiceMade = "DC 2022 Mayoral Election"
                                 }, label: {
-                                    Text("DC 2022 Mayoral Election)")
+                                    Text("DC 2022 Mayoral Election")
                                 })
                                 Button(action: {
                                     choiceMade = "Select Your Election"
@@ -84,7 +84,7 @@ struct ContentView: View {
                     } // for vStack
                 }//Z
             } // for navigation stack
-            .padding()
+            
             
         } // for some view
     
@@ -97,6 +97,7 @@ struct CustomColor {
     static let blue1 = Color("blue1")
     static let blue2 = Color("blue2")
     static let blue3 = Color("blue3")
+    static let lavender = Color("lavender")
 
 
 }
